@@ -36,7 +36,7 @@ angular.module('notesApp', [])
 
                 id: self.list.length + 1,
 
-                label: 'Item ' + self.list.length
+                label: 'Item ' + self.list.length + ", a number: " + Math.floor(Math.random() * 1000)
 
             });
 
