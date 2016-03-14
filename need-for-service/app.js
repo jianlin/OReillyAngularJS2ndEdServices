@@ -1,37 +1,45 @@
 // File: chapter5/need-for-service/app.js
 angular.module('notesApp', [])
-  .controller('MainCtrl', [function() {
 
-    console.log("Entering MainCtrl");
+    .controller('MainCtrl', [function() {
 
-    var self = this;
+        console.log("Entering MainCtrl");
 
-    self.tab = 'first';
+        var self = this;
 
-    self.open = function(tab) {
-      self.tab = tab;
-    };
+        self.tab = 'first';
 
-  }])
+        self.open = function(tab) {
+            self.tab = tab;
+        };
 
-  .controller('SubCtrl', [function() {
+    }])
 
-    console.log("Entering SubCtrl");
+    .controller('SubCtrl', [function() {
 
-    var self = this;
+        console.log("Entering SubCtrl");
 
-    self.list = [
-      {id: 1, label: 'Item 0'},
-      {id: 2, label: 'Item 1'}
-    ];
+        var self = this;
 
-    self.add = function() {
+        self.list = [
 
-      self.list.push({
-        id: self.list.length + 1,
-        label: 'Item ' + self.list.length
-      });
+            {id: 1, label: 'Item 0'},
+            {id: 2, label: 'Item 1'}
 
-    };
+        ];
 
-  }]);
+        self.add = function() {
+
+            console.log("Entering add()");
+
+            self.list.push({
+
+                id: self.list.length + 1,
+
+                label: 'Item ' + self.list.length
+
+            });
+
+        };
+
+    }]);
